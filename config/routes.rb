@@ -1,7 +1,6 @@
 SampleApp4::Application.routes.draw do
   
-  get "users/new" # This will be eliminated in 7.1.2
-
+  resources :users
   root 'static_pages#home'
   match "/signup",  to: 'users#new',            via: 'get'
   match "/help",    to: 'static_pages#help',    via: 'get'
